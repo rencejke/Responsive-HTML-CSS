@@ -218,6 +218,55 @@ img {
     transition: 0.5s ease;
   }
 }
+
+@media screen and (max-width: 853px) {
+  .header .toggle__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .header .header__nav {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--clr-semi-light);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    z-index: 999;
+    transform: translateY(-18rem);
+    margin-top: 25rem;
+    gap: 2rem;
+    right: -100rem;
+    transition: 0.5s ease;
+  }
+
+  .header .header__nav.open {
+    right: 0;
+  }
+
+  .header .header__wrapper img {
+    width: 10rem;
+  }
+  .toggle__menu span:nth-child(1) {
+    transform: translate(0, 11px) rotate(230deg);
+    transition: 0.5s ease;
+  }
+
+  .toggle__menu span:nth-child(2) {
+    opacity: 0;
+    transition: 0.5s ease;
+  }
+
+  .toggle__menu span:nth-child(3) {
+    transform: translate(0, -7px) rotate(-230deg);
+    transition: 0.5s ease;
+  }
+}
+
 /* top */
 .top {
   background-color: var(--clr-secondary);
@@ -237,6 +286,24 @@ img {
   font-size: 3rem;
 }
 
+/* top */
+.top {
+  background-color: var(--clr-secondary);
+  padding-top: 13rem;
+  padding-right: 3rem;
+  text-align: center;
+}
+
+.top .top__wrapper span {
+  font-size: 1.7rem;
+  font-weight: 100;
+  margin-bottom: 5rem;
+}
+.top .top__wrapper h4 {
+  line-height: 2.2rem;
+  font-weight: 700;
+  font-size: 3rem;
+}
 /* banner */
 
 .banner {
@@ -1068,9 +1135,20 @@ footer .footer__wrapper .footer__icons li a {
     .designs__right
     .categories__data
     .categories__wrapper {
-    grid-template-columns: 30rem;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
+
+@media screen and (max-width: 853px) {
+  .buildingDesigns
+    .buildingDesigns__wrapper
+    .designs__left
+    .buildingDesigns__services
+    .services__wrapper {
+    grid-template-columns: 20rem 20rem;
+  }
+}
+
 .recentProjects h2 {
   color: var(--clr-primary);
   font-size: 6rem;
@@ -1165,4 +1243,50 @@ footer .footer__wrapper .footer__icons li a {
     height: 25rem;
     width: 40rem;
   }
+}
+
+@media screen and (max-width: 853px) {
+  .recentProjects .recentProjects__wrapper .recentProjects__imageData {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .recentProjects
+    .recentProjects__wrapper
+    .recentProjects__imageData
+    .recentprojects__date {
+    float: left;
+  }
+
+  .recentProjects .recentProjects__imageData {
+    font-size: 10px;
+  }
+
+  .recentProjects .recentProjects__wrapper img {
+    height: 25rem;
+    width: 40rem;
+  }
+}
+
+/* contact us */
+
+.ContactUs__left {
+  padding-top: 25rem;
+  display: inline-block;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 4rem 0;
+}
+form input,
+textarea {
+  border-style: none;
+  border-bottom: 2px solid var(--clr-dark);
+}
+
+form textarea:focus,
+input:focus {
+  outline: none;
 }
