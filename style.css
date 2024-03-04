@@ -1270,9 +1270,14 @@ footer .footer__wrapper .footer__icons li a {
 
 /* contact us */
 
-.ContactUs__left {
+.ContactUs {
   padding-top: 25rem;
-  display: inline-block;
+}
+
+.ContactUs .ContactUs__wrapper {
+  display: grid;
+  grid-template-columns: 50rem 55rem;
+  grid-gap: 5rem;
 }
 
 form {
@@ -1284,9 +1289,51 @@ form input,
 textarea {
   border-style: none;
   border-bottom: 2px solid var(--clr-dark);
+  padding: 2rem 0;
+  font-style: var(--truculenta);
 }
 
 form textarea:focus,
 input:focus {
   outline: none;
+}
+
+.ContactUs .ContactUs__wrapper .ContactUs__left a {
+  margin-top: 2rem;
+  padding: 1rem;
+  text-align: center;
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  font-size: 2rem;
+  border-radius: 4rem;
+  text-transform: uppercase;
+}
+
+.ContactUs .ContactUs__wrapper .ContactUs__left h1 {
+  font-size: 5rem;
+  color: var(--clr-primary);
+  font-weight: 600;
+}
+
+.ContactUs .ContactUs__wrapper .ContactUs__left p {
+  font-size: 1.7rem;
+  margin-top: 2rem;
+}
+
+.ContactUs .ContactUs__wrapper .ContactUs__right {
+  margin-bottom: 3rem;
+  color: var(--clr-light);
+}
+
+.ContactUs .ContactUs__wrapper .ContactUs__right .ContactUs__details {
+  background-color: var(--clr-dark);
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+  margin-top: 9rem;
+}
+
+.ContactUs .ContactUs__wrapper .ContactUs__right h4 {
+  font-size: 3rem;
+  font-weight: 600;
 }
