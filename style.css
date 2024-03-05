@@ -178,6 +178,15 @@ img {
     gap: 0.5rem;
   }
 
+  .header .toggle__menu span {
+    color: var(--clr-primary);
+    display: block;
+    width: 3rem;
+    height: 0.3rem;
+    border: 2px solid;
+    border-radius: 1rem;
+  }
+
   .header .header__nav {
     position: fixed;
     top: 0;
@@ -1331,6 +1340,27 @@ input:focus {
   flex-direction: column;
   padding: 5rem;
   margin-top: 9rem;
+}
+
+.ContactUs .ContactUs__wrapper .ContactUs__right .ContactUs__details span {
+  font-size: 2rem;
+  margin: 1rem;
+  color: var(--clr-secondary);
+}
+
+.ContactUs .ContactUs__wrapper .ContactUs__right .ContactUs__details i
+
+
+.ContactUs
+  .ContactUs__wrapper
+  .ContactUs__right
+  .ContactUs__details
+  span:last-child {
+  padding-bottom: 6rem;
+}
+
+.ContactUs .ContactUs__wrapper .ContactUs__right .ContactUs__details h4 {
+  padding-bottom: 3rem;
 }
 
 .ContactUs .ContactUs__wrapper .ContactUs__right h4 {
