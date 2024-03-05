@@ -153,26 +153,15 @@ img {
 .header .header__wrapper nav ul li a:hover {
   color: var(--clr-primary);
 }
+.header .toggle__menu {
+  display: none;
+}
 
 /* header reponsive */
 
-.header .toggle__menu span {
-  color: var(--clr-primary);
-  display: block;
-  width: 3rem;
-  height: 0.3rem;
-  border: 2px solid;
-  border-radius: 1rem;
-}
-
-.header .toggle__menu {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
 @media screen and (max-width: 520px) {
-  .header .toggle__menu {
+  .header .toggle__menu,
+  .header .header__nav {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -193,8 +182,6 @@ img {
     height: 100vh;
     width: 100%;
     background-color: var(--clr-semi-light);
-    display: flex;
-    flex-direction: column;
     text-align: center;
     justify-content: center;
     z-index: 999;
@@ -212,6 +199,7 @@ img {
   .header .header__wrapper img {
     width: 10rem;
   }
+
   .toggle__menu span:nth-child(1) {
     transform: translate(0, 11px) rotate(230deg);
     transition: 0.5s ease;
@@ -312,6 +300,7 @@ img {
   line-height: 2.2rem;
   font-weight: 700;
   font-size: 3rem;
+  padding-bottom: 3rem;
 }
 /* banner */
 
@@ -1345,13 +1334,18 @@ input:focus {
 .ContactUs .ContactUs__wrapper .ContactUs__right .ContactUs__details span {
   font-size: 2rem;
   margin: 1rem;
+}
+
+.ContactUs .ContactUs__wrapper .ContactUs__right .ContactUs__details i {
   color: var(--clr-secondary);
 }
 
-.ContactUs .ContactUs__wrapper .ContactUs__right .ContactUs__details i
-
-
 .ContactUs
+  .ContactUs__wrapper
+  .ContactUs__right
+  .ContactUs__details
+  i
+  .ContactUs
   .ContactUs__wrapper
   .ContactUs__right
   .ContactUs__details
